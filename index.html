@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>CANVAS IS BACK AGAIN, AGAIN</title>
+  </head>
+  <body>
+
+<canvas id="canvas1" width="600" height="600"></canvas>
+
+<script type="text/javascript">
+
+var c = document.getElementById("canvas1");
+var ctx = c.getContext("2d");
+
+// Vaisseau
+ctx.beginPath()
+ctx.rect(0,0,600,600);
+ctx.fillStyle = "#0000ff";
+ctx.fill()
+
+ctx.beginPath()
+ctx.moveTo(100,300)
+ctx.quadraticCurveTo(300,200,500,300);
+ctx.fillStyle = "#e0e1f3";
+ctx.fill();
+
+ctx.beginPath()
+ctx.moveTo(100,300)
+ctx.quadraticCurveTo(300,400,500,300);
+ctx.fillStyle = "#e0e1f3";
+ctx.fill();
+
+ctx.beginPath()
+ctx.moveTo(225,260)
+ctx.quadraticCurveTo(300,100,375,260);
+ctx.fillStyle = "#ffffff";
+ctx.fill();
+
+ctx.beginPath()
+ctx.lineTo(295,260);
+ctx.lineTo(310,260);
+ctx.lineTo(310,220);
+ctx.lineTo(295,220);
+ctx.lineTo(295,260);
+ctx.fillStyle = "green";
+ctx.fill();
+
+ // Tête
+ctx.beginPath()
+ctx.moveTo(288,220)
+ctx.quadraticCurveTo(302,175,312,220);
+ctx.fillStyle = "#green";
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath()
+ctx.moveTo(288,220)
+ctx.quadraticCurveTo(298,245,312,220);
+ctx.fillStyle = "#green";
+ctx.fill();
+ctx.stroke();
+
+// Yeux
+ctx.beginPath();
+ctx.strokeStyle = "#000000";
+ctx.fillStyle="#000000";
+ctx.arc(295,210,1,0,Math.PI*2,false);
+ctx.stroke()
+ctx.fill()
+
+ctx.beginPath();
+ctx.arc(300,210,1,0,Math.PI*2,false);
+ctx.strokeStyle = "#000000";
+ctx.fillStyle="#000000";
+ctx.stroke();
+ctx.fill();
+
+//Bouche
+ctx.beginPath();
+ctx.moveTo(293,215);
+ctx.lineTo(302,215);
+ctx.strokeStyle = "#000000";
+ctx.stroke();
+
+</script>
+  </body>
+</html>
